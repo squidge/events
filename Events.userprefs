@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Events/EventsModule.cs">
+    <Files>
+      <File FileName="Events/Main.cs" Line="4" Column="1" />
+      <File FileName="Events/EventsModule.cs" Line="21" Column="25" />
+      <File FileName="Events/Views/Index.sshtml" Line="15" Column="49" />
+      <File FileName="Events/Models/Event.cs" Line="8" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

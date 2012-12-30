@@ -1,0 +1,31 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('form[name=add-event]').submit(function() {
+			$.post($(this).attr('action'), $(this).serialize(), function(data) { 
+	            $("ul").append('<li>' + data.What + ' - '+ formatDate(data.When) + '</li>');
+	            $('form[name=add-event]')[0].reset();
+			}, 'json');
+			
+			return false;
+		});
+	});
+	
+	function formatDate(jsonDate) {
+		return new Date(parseInt(jsonDate.substr(6)));
+	}
+</script>
+
+<h1>Your events</h1>
+
+<form name="add-event" method="post" action="add">
+	<label>what: </label><input type="text" name="what" /><br/>
+	<label>when: </label><input type="date" name="when" /><br/>
+	<input type="submit" value="add"/>
+</form>
+
+<ul>
+	@Each
+		<li>@Current.What - @Current.When </li>
+	@EndEach
+</ul>
